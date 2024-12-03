@@ -1,16 +1,22 @@
-﻿using SFML.Graphics;
+﻿using DotEngine.FywwEngine;
+using DotEngine.FywwEngine.Audio;
+using DotEngine.FywwEngine.Content;
+using DotEngine.FywwEngine.Drawable.ASprite;
+using DotEngine.FywwEngine.Drawable.Shapes;
+using DotEngine.FywwEngine.Window;
+using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
-namespace Dot
-{
-
     public class Program : AGame
     {
-        static ACircle circle;
+        private ARectangle rectangle;
+        
         static AWindow window = null;
-        private Camera cam;
-
+        private ASprite _sprite;
+        private AudioFile file;
+        private AudioPlayer Player;
+        
         public static void Main(string[] args)
         {
             new AWindow(new Program(), new WindowOptions("Test", new Vector2u(800, 600)), ref window);
@@ -18,30 +24,32 @@ namespace Dot
 
         public override void BeginPlay()
         {
-            circle = new ACircle(10f, Color.Magenta, new Vector2f(0, 0));
-            cam = new Camera(new Vector2f(800f, 600f), new Vector2f(800f, 600f));
-            window.SetCamera(cam);
+            var texture = new Texture("C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\player.jpg");
+            
+            _sprite = new ASprite(new Vector2f(0,0), texture);
         }
 
 
         public override void Update()
         {
-            circle.Shape.Position += new Vector2f(.01f, 0);
-
-            Console.WriteLine(InputManager?.GetMousePosition());
-
-            if (InputManager.IsKeyPressed(Keyboard.Key.Escape))
+            if (InputManager.IsKeyPressed(Keyboard.Key.A))
             {
-                Console.WriteLine(window == null ? "window is null" : "window is initialized");
-                window?.Close();
+                _sprite.Position -= new Vector2f(0.01f, 0f);
             }
             if (InputManager.IsKeyPressed(Keyboard.Key.W))
             {
-                Console.WriteLine("text");
-                cam.Rotate(10);
+                _sprite.Position -= new Vector2f(0f, 0.01f);
+            }
+            if (InputManager.IsKeyPressed(Keyboard.Key.S))
+            {
+                _sprite.Position += new Vector2f(0f, 0.01f);
+            }
+            if (InputManager.IsKeyPressed(Keyboard.Key.D))
+            {
+                _sprite.Position += new Vector2f(0.01f, 0f);
             }
         }
 
     }
-}
+
 

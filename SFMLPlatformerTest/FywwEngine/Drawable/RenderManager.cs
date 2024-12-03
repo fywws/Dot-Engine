@@ -1,4 +1,4 @@
-﻿namespace Dot
+﻿namespace DotEngine.FywwEngine.Drawable
 {
     public class RenderManager
     {

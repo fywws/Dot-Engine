@@ -1,7 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.System;
 
-namespace Dot
+namespace DotEngine.FywwEngine.Content
 {
     public class Camera
     {

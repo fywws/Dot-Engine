@@ -1,8 +1,11 @@
-﻿using SFML.Graphics;
+﻿using DotEngine.FywwEngine.Content;
+using DotEngine.FywwEngine.Drawable;
+using DotEngine.FywwEngine.Input;
+using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
-namespace Dot
+namespace DotEngine.FywwEngine.Window
 {
     public struct WindowOptions
     {
@@ -22,9 +25,13 @@ namespace Dot
         private readonly AGame _game;
         private readonly InputManager _inputManager = new();
         private readonly InputAccess _inputAccess;
+        
+        private Camera _user_camera;
+        private View _defaultView;
 
         public AWindow(AGame game, WindowOptions windowOptions)
         {
+            _defaultView = new View();
             _game = game ?? throw new ArgumentNullException(nameof(game));
             _options = windowOptions;
 
@@ -51,7 +58,7 @@ namespace Dot
             _game = game ?? throw new ArgumentNullException(nameof(game));
             _options = windowOptions;
             window = this;
-
+            
             _inputAccess = new InputAccess(_inputManager);
 
             try
@@ -71,6 +78,7 @@ namespace Dot
 
         public void SetCamera(Camera camera) { 
             _win?.SetView(camera.GetView());
+            _user_camera = camera;
         }
 
         private void InitializeWindow()
@@ -96,9 +104,19 @@ namespace Dot
             _win.Resized += (sender, e) =>
             {
                 float aspectRatio = (float)e.Width / e.Height;
-                var view = new View(new FloatRect(0, 0, 800, 800 / aspectRatio));
-                _win.SetView(view);
+
+                if (_user_camera == null)
+                {
+                    _defaultView = new View(new FloatRect(0, 0, 800, 800 / aspectRatio));
+                    _win.SetView(_defaultView);
+                }
+                else
+                {
+                    _user_camera.Size = new Vector2f(800f, 800f / aspectRatio);
+                    _user_camera.Zoom(_user_camera.ZoomFactor);
+                }
             };
+            
             _win.Closed += (sender, e) => Close();
         }
 
@@ -111,6 +129,7 @@ namespace Dot
 
         public void Render()
         {
+            
             if (_win == null)
                 throw new InvalidOperationException("Window has not been initialized.");
 
@@ -119,13 +138,14 @@ namespace Dot
                 _win.DispatchEvents();
                 _game?.Update();
                 _win.Clear(Color.Black);
+                _inputManager.UpdateKeys();
 
                 var renderManager = RenderManagerInstance.Instance;
                 if (renderManager?.drawables != null)
                 {
                     foreach (var drawable in renderManager.drawables)
                     {
-                        _win.Draw(drawable.Shape);
+                        drawable.Draw(_win);
                     }
                 }
 

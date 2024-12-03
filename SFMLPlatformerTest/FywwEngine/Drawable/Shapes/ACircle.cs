@@ -1,7 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.System;
 
-namespace Dot
+namespace DotEngine.FywwEngine.Drawable.Shapes
 {
 
     public class ACircle : IDrawable
@@ -14,8 +14,13 @@ namespace Dot
             circle.Radius = radius;
             circle.FillColor = color;
             circle.Position = position;
-            Shape = circle;
         }
+        
+        public override void Draw(RenderWindow window)
+        {
+            window.Draw(circle);
+        }
+
 
         public Vector2f Position
         {

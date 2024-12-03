@@ -196,3 +196,4 @@ C:\Users\kovma\source\repos\SFMLPlatformerTest\SFMLPlatformerTest\obj\Debug\net8
 C:\Users\kovma\source\repos\SFMLPlatformerTest\SFMLPlatformerTest\obj\Debug\net8.0\DotEngine.pdb
 C:\Users\kovma\source\repos\SFMLPlatformerTest\SFMLPlatformerTest\obj\Debug\net8.0\DotEngine.genruntimeconfig.cache
 C:\Users\kovma\source\repos\SFMLPlatformerTest\SFMLPlatformerTest\obj\Debug\net8.0\ref\DotEngine.dll
+C:\Users\kovma\source\repos\SFMLPlatformerTest\SFMLPlatformerTest\obj\Debug\net8.0\DotEngine.sourcelink.json

@@ -1,6 +1,6 @@
-﻿using SFML.Window;
+﻿using DotEngine.FywwEngine.Input;
 
-namespace Dot
+namespace DotEngine.FywwEngine
 {
     public class AGame
     {
