@@ -15,7 +15,7 @@ namespace DotEngine.FywwEngine.Drawable.Shapes
             circle.FillColor = color;
             circle.Position = position;
         }
-        
+
         public override void Draw(RenderWindow window)
         {
             window.Draw(circle);

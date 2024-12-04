@@ -6,15 +6,15 @@ namespace DotEngine.FywwEngine.Drawable.ASprite;
 public class ASprite : IDrawable
 {
     private Sprite _sprite = new Sprite();
-    
+
     public ASprite(Vector2f position, Texture texture)
     {
         RenderManagerInstance.Instance.AddDrawable(this);
         this.Position = position;
         this.Texture = texture;
-        
+
     }
-    
+
     public ASprite(Vector2f position, Texture texture, Vector2f size)
     {
         RenderManagerInstance.Instance.AddDrawable(this);
@@ -33,7 +33,7 @@ public class ASprite : IDrawable
         window.Draw(_sprite);
     }
 
-        
+
     public Vector2f Position
     {
         get => _sprite.Position;
@@ -50,5 +50,5 @@ public class ASprite : IDrawable
     {
         get => _sprite.Color;
         set => _sprite.Color = value;
-    }    
+    }
 }

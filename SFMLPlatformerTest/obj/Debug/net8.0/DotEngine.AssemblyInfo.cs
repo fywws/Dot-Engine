@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83e7b29a0af12da9cfff85c1a6adec32a438fc9c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2044cf2cae2b909a4f5a49158d2a55ba66e5088d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

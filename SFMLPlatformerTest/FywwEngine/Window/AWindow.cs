@@ -20,12 +20,12 @@ namespace DotEngine.FywwEngine.Window
 
     public class AWindow
     {
-        private RenderWindow? _win;
+        private RenderWindow _win;
         private readonly WindowOptions _options;
         private readonly AGame _game;
         private readonly InputManager _inputManager = new();
         private readonly InputAccess _inputAccess;
-        
+
         private Camera _user_camera;
         private View _defaultView;
 
@@ -58,7 +58,7 @@ namespace DotEngine.FywwEngine.Window
             _game = game ?? throw new ArgumentNullException(nameof(game));
             _options = windowOptions;
             window = this;
-            
+
             _inputAccess = new InputAccess(_inputManager);
 
             try
@@ -76,9 +76,31 @@ namespace DotEngine.FywwEngine.Window
             }
         }
 
-        public void SetCamera(Camera camera) { 
+        public void SetCamera(Camera camera)
+        {
             _win?.SetView(camera.GetView());
             _user_camera = camera;
+        }
+
+        public Vector2f ViewportToWorld(Vector2i position)
+        {
+            return _win.MapPixelToCoords(position);
+        }
+
+
+        public Vector2i WorldToViewport(Vector2f position)
+        {
+            return _win.MapCoordsToPixel(position);
+        }
+
+        public Vector2i GetWindowPosition()
+        {
+            return _win.Position;
+        }
+
+        public void SetWindowPosition(Vector2i position)
+        {
+            _win.Position = position;
         }
 
         private void InitializeWindow()
@@ -88,6 +110,9 @@ namespace DotEngine.FywwEngine.Window
                 _options.Title
             );
         }
+
+
+        private bool IsFocused;
 
         private void AttachEventHandlers()
         {
@@ -116,7 +141,7 @@ namespace DotEngine.FywwEngine.Window
                     _user_camera.Zoom(_user_camera.ZoomFactor);
                 }
             };
-            
+
             _win.Closed += (sender, e) => Close();
         }
 
@@ -129,6 +154,8 @@ namespace DotEngine.FywwEngine.Window
 
         public void Render()
         {
+
+            IsFocused = _win.HasFocus();
             
             if (_win == null)
                 throw new InvalidOperationException("Window has not been initialized.");
@@ -159,6 +186,11 @@ namespace DotEngine.FywwEngine.Window
             {
                 _win.Close();
             }
+        }
+
+        internal void SetWindowPosition(object value)
+        {
+            throw new NotImplementedException();
         }
     }
 }

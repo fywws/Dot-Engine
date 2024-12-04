@@ -12,14 +12,14 @@ namespace DotEngine.FywwEngine.Input
         private readonly HashSet<Mouse.Button> _previousMousePressedButtons = new();
 
         private Vector2i _mousePosition;
-        
+
         public bool IsKeyPressed(Keyboard.Key key) => _pressedKeys.Contains(key);
 
         public bool IsKeyJustPressed(Keyboard.Key key)
         {
             return _pressedKeys.Contains(key) && !_previousPressedKeys.Contains(key);
         }
-        
+
         public bool IsKeyJustReleased(Keyboard.Key key)
         {
             return !_pressedKeys.Contains(key) && _previousPressedKeys.Contains(key);
@@ -27,18 +27,21 @@ namespace DotEngine.FywwEngine.Input
 
         public bool IsMouseButtonJustPressed(Mouse.Button button)
         {
-            return _pressedMouseButtons.Contains(button) && !_previousMousePressedButtons.Contains(button);   
+            return _pressedMouseButtons.Contains(button) && !_previousMousePressedButtons.Contains(button);
         }
-        
+
         public bool IsMouseButtonJustReleased(Mouse.Button button)
         {
-            return !_pressedMouseButtons.Contains(button) && _previousMousePressedButtons.Contains(button);   
+            return !_pressedMouseButtons.Contains(button) && _previousMousePressedButtons.Contains(button);
         }
+
         
         public bool IsMouseButtonPressed(Mouse.Button button) => _pressedMouseButtons.Contains(button);
 
         public Vector2i GetMousePosition() => _mousePosition;
-        
+
+        public void SetMousePosition(Vector2i position) => Mouse.SetPosition(position);
+
         internal void HandleKeyPressed(KeyEventArgs key) => _pressedKeys.Add(key.Code);
 
         internal void HandleKeyReleased(KeyEventArgs key) => _pressedKeys.Remove(key.Code);
@@ -48,7 +51,7 @@ namespace DotEngine.FywwEngine.Input
         internal void HandleMouseButtonReleased(MouseButtonEventArgs button) => _pressedMouseButtons.Remove(button.Button);
 
         internal void UpdateMousePosition(Vector2i position) => _mousePosition = position;
-        
+
         public void UpdateKeys()
         {
             _previousPressedKeys.Clear();
@@ -56,7 +59,7 @@ namespace DotEngine.FywwEngine.Input
             {
                 _previousPressedKeys.Add(key);
             }
-            
+
             _previousMousePressedButtons.Clear();
             foreach (var key in _pressedMouseButtons)
             {

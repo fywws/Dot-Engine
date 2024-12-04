@@ -31,7 +31,7 @@ public class RectangleCollider : ICollider
 
             Vector2f distanceNonNormilized = (closestPoint - circle.Position);
             float distance = MathF.Pow(distanceNonNormilized.X, 2) + MathF.Pow(distanceNonNormilized.Y, 2);
-            
+
             return distance < circle.Radius;
         }
 

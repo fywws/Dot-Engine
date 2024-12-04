@@ -4,7 +4,7 @@ namespace DotEngine.FywwEngine.Audio;
 
 public class AudioPlayer : IDisposable
 {
-    
+
     ///
     /// <summary>
     /// 
@@ -15,8 +15,8 @@ public class AudioPlayer : IDisposable
     /// </summary>
     ///
     private Sound _sound;
-    
-        
+
+
     ///
     /// <summary>
     /// Loop of the sound.
@@ -25,8 +25,8 @@ public class AudioPlayer : IDisposable
     /// </summary>
     ///
     private bool loop = false;
-    
-    
+
+
     ///
     /// <summary>
     /// Volume of the sound.
@@ -35,19 +35,19 @@ public class AudioPlayer : IDisposable
     /// </summary>
     ///
     private float volume = 100;
-    
-    
+
+
     public AudioPlayer(AudioFile file)
     {
         _sound = new Sound(file.buffer);
     }
-    
+
     public AudioPlayer(AudioFile file, bool loop)
     {
         _sound = new Sound(file.buffer);
         this.loop = loop;
     }
-    
+
     public AudioPlayer(AudioFile file, bool loop, float volume)
     {
         _sound = new Sound(file.buffer);
@@ -71,7 +71,7 @@ public class AudioPlayer : IDisposable
     {
         _sound.Stop();
     }
-    
+
     public void Dispose()
     {
         _sound.Dispose();
@@ -83,7 +83,7 @@ public class AudioPlayer : IDisposable
         set => loop = value;
     }
 
-    
+
     public float Volume
     {
         get => volume;

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Oyy4/wbnoqw=",
+  "dgSpecHash": "H5KkP2oyaNs=",
   "success": true,
   "projectFilePath": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\DotEngine.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kovma\\.nuget\\packages\\csfml\\2.6.1\\csfml.2.6.1.nupkg.sha512",
+    "C:\\Users\\kovma\\.nuget\\packages\\keralua\\1.4.1\\keralua.1.4.1.nupkg.sha512",
+    "C:\\Users\\kovma\\.nuget\\packages\\nlua\\1.7.3\\nlua.1.7.3.nupkg.sha512",
     "C:\\Users\\kovma\\.nuget\\packages\\sfml.audio\\2.6.0\\sfml.audio.2.6.0.nupkg.sha512",
     "C:\\Users\\kovma\\.nuget\\packages\\sfml.graphics\\2.6.0\\sfml.graphics.2.6.0.nupkg.sha512",
     "C:\\Users\\kovma\\.nuget\\packages\\sfml.net\\2.6.0\\sfml.net.2.6.0.nupkg.sha512",

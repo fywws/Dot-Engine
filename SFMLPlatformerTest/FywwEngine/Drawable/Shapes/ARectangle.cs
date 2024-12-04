@@ -25,7 +25,7 @@ namespace DotEngine.FywwEngine.Drawable.Shapes
             window.Draw(rect);
         }
 
-        
+
         public Vector2f Position
         {
             get => rect.Position;

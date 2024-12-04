@@ -1,12 +1,107 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|c:\\users\\kovma\\source\\repos\\sfmlplatformertest\\sfmlplatformertest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|solutionrelative:sfmlplatformertest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|c:\\users\\kovma\\source\\repos\\sfmlplatformertest\\sfmlplatformertest\\fywwengine\\window\\awindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|solutionrelative:sfmlplatformertest\\fywwengine\\window\\awindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|c:\\users\\kovma\\source\\repos\\sfmlplatformertest\\sfmlplatformertest\\fywwengine\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|solutionrelative:sfmlplatformertest\\fywwengine\\input\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|c:\\users\\kovma\\source\\repos\\sfmlplatformertest\\sfmlplatformertest\\fywwengine\\agame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|solutionrelative:sfmlplatformertest\\fywwengine\\agame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|c:\\users\\kovma\\source\\repos\\sfmlplatformertest\\sfmlplatformertest\\fywwengine\\drawable\\rendermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C00EDB0-07F2-4B39-A182-9D21CD38D465}|SFMLPlatformerTest\\DotEngine.csproj|solutionrelative:sfmlplatformertest\\fywwengine\\drawable\\rendermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 187,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\Program.cs",
+              "RelativeDocumentMoniker": "SFMLPlatformerTest\\Program.cs",
+              "ToolTip": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\Program.cs",
+              "RelativeToolTip": "SFMLPlatformerTest\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:05:26.486Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AWindow.cs",
+              "DocumentMoniker": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\Window\\AWindow.cs",
+              "RelativeDocumentMoniker": "SFMLPlatformerTest\\FywwEngine\\Window\\AWindow.cs",
+              "ToolTip": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\Window\\AWindow.cs",
+              "RelativeToolTip": "SFMLPlatformerTest\\FywwEngine\\Window\\AWindow.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAIAwwGsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:09:30.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\Input\\InputManager.cs",
+              "RelativeDocumentMoniker": "SFMLPlatformerTest\\FywwEngine\\Input\\InputManager.cs",
+              "ToolTip": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\Input\\InputManager.cs",
+              "RelativeToolTip": "SFMLPlatformerTest\\FywwEngine\\Input\\InputManager.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:16:06.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RenderManager.cs",
+              "DocumentMoniker": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\Drawable\\RenderManager.cs",
+              "RelativeDocumentMoniker": "SFMLPlatformerTest\\FywwEngine\\Drawable\\RenderManager.cs",
+              "ToolTip": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\Drawable\\RenderManager.cs",
+              "RelativeToolTip": "SFMLPlatformerTest\\FywwEngine\\Drawable\\RenderManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:09:26.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AGame.cs",
+              "DocumentMoniker": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\AGame.cs",
+              "RelativeDocumentMoniker": "SFMLPlatformerTest\\FywwEngine\\AGame.cs",
+              "ToolTip": "C:\\Users\\kovma\\source\\repos\\SFMLPlatformerTest\\SFMLPlatformerTest\\FywwEngine\\AGame.cs",
+              "RelativeToolTip": "SFMLPlatformerTest\\FywwEngine\\AGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T12:09:19.378Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
